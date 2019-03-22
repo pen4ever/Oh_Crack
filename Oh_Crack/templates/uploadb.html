@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oh Crack!</title>
+<style>
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+header {
+  background-color: white;
+  padding-top: 8rem;
+  padding-bottm: 8rem;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav{
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottm: 1rem;
+  text-align: center;
+  font-size: 10px;
+  color: black;
+}
+
+header.mainhead {
+  position: relative;
+  background-color: #343a40;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;  
+  background-image:url({{url_for('static', filename='css/img/IMG_8163.jpg')}})
+}
+
+</style>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="expires" content="0">
+
+	
+
+    <!--href="{{ url_for('static', filename='stylesheets/style.css') }}" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Oh Crack</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+ </head>
+  
+<body>	
+	<!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand">Oh Crack!</a>
+        <a class="btn btn-primary" href="https://blackrockdigital.github.io/startbootstrap-landing-page/#">Sign In</a>
+      </div>
+    </nav>
+
+
+	    <!-- Main -->
+    <header class="mainhead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">
+            <h1 class="mb-5">Upload an image of pavement distress!</h1>
+          </div>
+          <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
+            <form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+              <div class="form-group">			  
+                <div class="col-12 col-md-9 mb-2 mb-md-0">
+				 <input id="file-picker" type="file" name="file" accept="image/*" multiple>	
+                </div>
+			  </div>
+				<div class="form-group">
+					 <div class="col-12 col-md-6">
+					 <input id="location1-writer" input type="Incident Address" class="form-control form-control-lg" placeholder="Incident Address">
+					 </div>
+				 </div>
+				<div class="form-group">
+				 <div class="col-12 col-md-6">
+				 <input id="location2-writer" input type="Street1" class="form-control form-control-lg" placeholder="Street 1">
+                </div>
+				</div> 
+				 <div class="form-group">
+				 <div class="col-13 col-md-6">
+				 <input id="zipcode-writer" input type="Street2" class="form-control form-control-lg" placeholder="Street 2">
+                </div>
+				</div>
+				<div class="form-group">
+				 <div class="col-13 col-md-6">
+				 <input id="zipcode-writer" input type="Community" class="form-control form-control-lg" placeholder="Community">
+                </div>
+				</div>
+				
+                <div class="col-14 col-md-6">
+				<div id="msg"></div>
+				<input type="submit" class="btn btn-block btn-lg btn-primary" value="Submit" id="upload-button">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+ 
+    </header>
+	
+	
+	
+	
+<!--	<form id="upload-form" action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+	<div 
+    <strong>Image</strong>
+    <input id="file-picker" type="file" name="file" accept="image/*" multiple>	
+	<div>	
+		<strong>Location</strong>
+		<input id="location-writer" input type="Location" class="form-control form-control-lg" placeholder="">
+	</div>
+    <div id="msg"></div>
+    <input type="submit" class="button" value="Upload!" id="upload-button">
+</form> -->
+</body>
+<script>
+
+    $("#file-picker").change(function(){
+        var input = document.getElementById('file-picker');
+        for (var i=0; i<input.files.length; i++)
+        {
+            var ext= input.files[i].name.substring(input.files[i].name.lastIndexOf('.')+1).toLowerCase()
+
+            if ((ext == 'jpg') || (ext == 'png'))
+            {
+                $("#msg").text("Files are supported")
+            }
+            else
+            {
+                $("#msg").text("Files are NOT supported")
+                document.getElementById("file-picker").value ="";
+            }
+        }
+    } );
+	
+	$("location-writer").change(function(){
+		var locationInput = document.getElementById('location-writer');			
+	})
+
+</script>
+</html>

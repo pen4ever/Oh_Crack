@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <!--href="{{ url_for('static', filename='stylesheets/style.css') }}" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Oh Crack</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+ </head>
+<style>
+header.mainhead {
+  position: relative;
+  background-color: #343a40;
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;  
+}
+</style>
+ 
+<body>	
+	<!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand">Oh Crack!</a>
+        <a class="btn btn-primary" href="https://blackrockdigital.github.io/startbootstrap-landing-page/#">Sign In</a>
+      </div>
+    </nav>
+	
+	<!-- Main -->
+    <header class="mainhead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">					  
+		    <img style="vertical-align:middle" src="{{url_for('static', filename='tmp.jpg')}}" width="300" height="300">
+			<span style="">Type of complaint: {{crack_type}}</span>
+          </div>
+        </div>
+	</header>
+	
+	 <!--Statistics -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row no-gutters">
+          <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url(&#39;img/bg-showcase-1.jpg&#39;);"></div>
+          <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+            <h2>Estimated Maintenance Lead Time</h2>
+            <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
+          </div>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-6 text-white showcase-img" style="background-image: url(&#39;img/bg-showcase-2.jpg&#39;);"></div>
+          <div class="col-lg-6 my-auto showcase-text">
+            <h2>Updated For Bootstrap 4</h2>
+            <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+		
+<!--<div>
+<img src=" {{url_for('send_image', filename=image_name)}}" width="400" height="400">
+<p>Type of complaint: {{crack_type}}</p>
+</div>-->
+
+</body>
+</html>

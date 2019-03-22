@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<meta http-equiv="cache-control" content="no-cache no-cache, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="expires" content="-1">
+	
+
+	
+    <!--href="{{ url_for('static', filename='stylesheets/style.css') }}" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Oh Crack</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+ </head>
+<style>
+header.mainhead {
+  position: relative;
+  background-color: #343a40;
+  background-size: cover;
+  padding-top: 2rem;
+  padding-bottom: 2rem;  
+}
+
+section.showcase {
+  position: relative;
+  background-color: white;
+  background-size: cover;
+}
+
+tableContainer-2 {
+  vertical-align: middle;
+  display: table-cell;
+  height: 100%;
+  text-align:center
+  }
+  
+table.dataframe, .dataframe th, .dataframe td {
+  border: none;
+  border-bottom: 1px solid #C8C8C8;
+  border-collapse: collapse;
+  text-align:left;
+  padding: 10px;
+  margin-bottom: 40px;
+  font-size: 0.9em;
+}
+  
+</style>
+ 
+<body>	
+	<!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand">Oh Crack!</a>
+        <a class="btn btn-primary" href="{{url_for('about')}}">About New York Pavement Distress</a>
+      </div>
+    </nav>
+	
+	<!-- Main -->
+    <header class="mainhead text-white text-center">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-9 mx-auto">			
+		    <!--<img style="vertical-align:middle" src="{{image_name}}" width="300" height="300">-->
+		    <img style="vertical-align:middle" src="{{url_for('send_image', filename=image_name, _=current_time)}}" width="300" height="300">
+			<span style="">Type of complaint: {{crack_type}}</span>
+          </div>
+        </div>
+	</header>
+	
+	<!--Statistics -->
+    <section class="showcase">
+      <div class="container-fluid p-0">
+        <div class="row">
+		  <div class="col-xl-9 mx-auto"> 
+		   <h3> Estimated Maintenane Lead Time* {{lead_time}} days</h3>
+
+				<div id="tableContainer-2" align= "center">
+				<h1> Previous Maintenance History</h1>
+				<table class="table table-striped">
+				{% for table in tables %}
+					<!--<h2>{{titles[loop.index]}}</h2>-->
+					{{ table|safe }}
+				{% endfor %}'	   
+				</table>
+
+				</div>
+			</div>
+		</div>
+	  </div>
+    </section> 
+	
+
+		
+<!--<div>
+<img src=" {{url_for('send_image', filename=image_name)}}" width="400" height="400">
+<p>Type of complaint: {{crack_type}}</p>
+</div>-->
+
+</body>
+</html>

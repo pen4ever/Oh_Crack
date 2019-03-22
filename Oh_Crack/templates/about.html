@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Oh Crack!</title>
+<style>
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+header {
+  background-color: white;
+  padding-top: 8rem;
+  padding-bottm: 8rem;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+nav{
+  background-color: white;
+  padding-top: 1rem;
+  padding-bottm: 1rem;
+  text-align: center;
+  font-size: 10px;
+  color: black;
+}
+
+header.mainhead {
+  position: relative;
+  background-color: white;
+  background-size: cover;
+  padding-top: 8rem;
+  padding-bottom: 8rem;  
+  }
+
+</style>
+
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="expires" content="0">
+
+	
+
+    <!--href="{{ url_for('static', filename='stylesheets/style.css') }}" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Oh Crack</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+ </head>
+  
+<body>	
+	<!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.css')}}" rel="stylesheet">
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <a class="navbar-brand">Oh Crack!</a>
+        <a class="btn btn-primary" href="{{url_for('about')}}">Sign In</a>
+      </div>
+    </nav>
+
+
+	    <!-- Main -->
+  		  
+      
+		<p>Number of complaints regarding pavement distress in 2011-2018: </p> 
+
+		{% block body %}
+		{% include "new_york.html" %}
+		{% endblock %}
+	
+
+</body>
+<script>
+
+
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
