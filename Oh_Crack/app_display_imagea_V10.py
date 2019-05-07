@@ -66,8 +66,6 @@ def detection_stage(PATH_TO_CKPT, image, scale):
 def HistoryCheck(plist, field, var):
     print(var)
     hist_list = pd.DataFrame(plist[plist[field] == var])
-    #print(pd.DataFrame(plist[plist['Street Name'] == 'LOGAN STREET']).head(10))
-    #hist_list = pd.DataFrame(plist[plist['Street Name'] =='LOGAN STREET'])
     return hist_list
 
 # Related to the image classification
@@ -83,6 +81,7 @@ def LoadMyGeojson(filename):
         geometry = json.load(f)
     return geometry
 
+# Search the community 
 def Pavement_By_Community(Pave_Pro, Pothole_List, Cracked_List, Broken_List):
     Comm_Count = Counter(Pave_Pro['Borough'])
     NumDist = len(list(Comm_Count))
