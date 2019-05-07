@@ -7,3 +7,6 @@ To install all related dependencies:
 pip install -r requirement.txt
 
 The crack detection consists of two parts, crack detection and recognitiom. A pre-trained RetinaNet model in Keras has been used to detect the cracks using transfer learning. 
+
+Demo
+(https://i.imgur.com/vKb2F1B.png)](https://youtu.be/vt5fpE0bzSY)
