@@ -10,7 +10,6 @@ The crack detection consists of two parts, crack detection and recognitiom. A pr
 
 Demo:
 
-![](http://damien.pobel.fr/images/youtube-video-github.gif)
+![](https://drive.google.com/open?id=1d7roJp6-EWpKm5a9V0aSc4qdIsYRuU1s)
 
-See also [Embed a Youtube video in Github markdown](http://damien.pobel.fr/post/youtube-video-github/)
 
