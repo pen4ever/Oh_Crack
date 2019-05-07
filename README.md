@@ -4,6 +4,6 @@ Oh_Crack is a deep-learning based program that automatically detect the types of
 
 Oh_Crack was developed on Python 3.6.
 To install all related dependencies:
-pip install -r requirements.txt
+pip install -r requirement.txt
 
 The crack detection consists of two parts, crack detection and recognitiom. A pre-trained RetinaNet model in Keras has been used to detect the cracks using transfer learning. 
