@@ -10,6 +10,4 @@ The crack detection consists of two parts, crack detection and recognitiom. A pr
 
 Demo:
 
-![](https://drive.google.com/open?id=1d7roJp6-EWpKm5a9V0aSc4qdIsYRuU1s)
-
 [![Watch the video](https://drive.google.com/open?id=1PxGHir_qSUjQSJARozNPrqRJZR63ovDK)](https://drive.google.com/open?id=1d7roJp6-EWpKm5a9V0aSc4qdIsYRuU1s)
